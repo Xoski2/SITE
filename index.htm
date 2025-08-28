@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="menu-toggle">☰</div>
+      <div class="logo">My Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="toggle-theme">🌙</button>
+       <div class="menu-toggle"></div>
+    </nav>
+   
+  </header>
+
+   
+
+  <!-- About Section -->
+  <section id="about">
+      <section id="about">
+  <h2>About Me</h2>
+  <div class="about-grid">
+    <img src="xoski.jpg" alt="My photo" />
+  
+    <div class="bio">
+      <p>
+        Hi! I'm a creative web developer and graphic designer. I enjoy crafting clean, functional websites and visuals that make a strong impression.
+      </p>
+      <p class="extra-bio hidden">
+        I specialize in HTML, CSS, JavaScript, Adobe Illustrator, and Photoshop. I also have a knack for organizing ideas and presenting them clearly using Microsoft Office tools.
+      </p>
+      <button id="readMoreBtn">Read More</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Services Section -->
+<!-- Services Section -->
+<section id="services" class="section services">
+  <h2>Services</h2>
+  <div class="services-list">
+    <div class="service-card" onclick="showService('web')">
+      <span>💻</span>
+      <h3>Responsive Web Design</h3>
+      <p>HTML, CSS, JavaScript websites that adapt beautifully to all screens.</p>
+    </div>
+    <div class="service-card" onclick="showService('graphic')">
+      <span>🎨</span>
+      <h3>Graphic Design</h3>
+      <p>Posters, flyers & more with Adobe Photoshop & Illustrator.</p>
+    </div>
+    <div class="service-card" onclick="showService('office')">
+      <span>📊</span>
+      <h3>Microsoft Office Assistance</h3>
+      <p>Support with Word, Excel, PowerPoint for clean documentation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>My Work</h2>
+  <div class="projects-container" id="projectsContainer">
+
+    <!-- Portfolio Website (links) -->
+    <div class="project-card">
+      <img src="assets/portfolio-website-thumb.jpg" alt="Portfolio Website">
+      <h3>Portfolio Website</h3>
+      <p>A collection of my live and responsive websites.</p>
+      <a href="https://example.com" target="_blank" class="view-btn">View Website</a>
+      <a href="https://example2.com" target="_blank" class="view-btn">View Another</a>
+    </div>
+
+<div class="project-card">
+  <h3>Graphic Design Gallery</h3>
+  <p>Posters, flyers, and creative visuals.</p>
+
+  <!-- Main Preview Image -->
+  <img src="webbanner.jpg" alt="Graphic Design" class="gallery-preview" onclick="openGallery(0)">
+
+  <!-- View Gallery Button -->
+  <button class="view-btn" onclick="openGallery(0)">View Gallery</button>
+</div>
+
+<!-- Hidden Images (Gallery Source) -->
+<div class="gallery-images" style="display:none;">
+  <img src="webbanner.jpg" alt="Creative Web Banner Design">
+  <img src="ethel.jpg" alt="Birthday Flyer Design">
+  <img src="furti.jpg" alt="furtiture Flyer Design">
+  <img src="grace.jpg" alt="Election Flyer Design">
+</div>
+
+<!-- Modal for Gallery -->
+<div id="gallery-modal" class="gallery-modal">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <img id="gallery-modal-img" src="" alt="">
+  <div class="caption" id="gallery-caption"></div>
+  <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+  <a class="next" onclick="changeImage(1)">&#10095;</a>
+</div>
+
+
+<div class="project-card">
+  <h3>Business Dashboard</h3>
+  <p>Interactive analytics dashboard documentation (PDF).</p>
+  <a href="business-dashboard.pdf" target="_blank" class="view-btn">View PDF</a>
+</div>
+
+
+  </div>
+</section>
+
+<!-- Modal Viewer for PDFs -->
+<div id="fileModal">
+  <span class="close-btn" onclick="closeViewer()">&times;</span>
+  <iframe id="fileFrame"></iframe>
+</div>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Portfolio[Imajzine]. All rights reserved.</p>
+  </div>
+  </footer>
+
+  <div class="cta-button">
+    <a href="#contact" class="advertise-button">Advertise with us</a>
+  </div>
+</section>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
